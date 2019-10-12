@@ -1,0 +1,13 @@
+# create a link to this file in /etc/systemd/system
+[Unit]
+Description=GPIO Switcher
+#Start after network is available
+After=network-online.target
+
+[Service]
+WorkingDirectory=/var/tmp
+ExecStart=/bin/dotnet/dotnet /etc/rs/GPIO.Service.Cmd.dll --Daemon:Pin="1" --Daemon:SwitchOnHour="7" --Daemon:SwitchOffHour="23"
+
+[Install]
+#Start service on system boot
+WantedBy=multi-user.target
