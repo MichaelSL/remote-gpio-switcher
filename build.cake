@@ -47,6 +47,7 @@ Task("Create-Release")
    CopyFileToDirectory("remote-switcher.service", PUBLISH_PATH);
    Zip(PUBLISH_PATH, RELEASE_PATH + "/rs.zip");
    CopyFileToDirectory("remote-switcher-install.sh", RELEASE_PATH);
+   CopyFileToDirectory("remote-switcher-update.sh", RELEASE_PATH);
 });
 
 Task("Default")
