@@ -28,7 +28,7 @@ namespace GPIO.Service.Cmd
                 _logger?.LogDebug("GPIO pin opened: {pin}", _pin);
             }
 
-            _controller.Write(_pin, PinValue.Low);
+            _controller.Write(_pin, PinValue.High);
             _logger?.LogDebug("PIN off: {pin}", _pin);
         }
 
@@ -40,7 +40,7 @@ namespace GPIO.Service.Cmd
                 _logger?.LogDebug("GPIO pin opened: {pin}", _pin);
             }
 
-            _controller.Write(_pin, PinValue.High);
+            _controller.Write(_pin, PinValue.Low);
             _logger?.LogDebug("PIN off: {pin}", _pin);
         }
 
