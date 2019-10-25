@@ -29,7 +29,7 @@ namespace GPIO.Service.Cmd
             }
 
             _controller.Write(_pin, PinValue.High);
-            _logger?.LogDebug("PIN off: {pin}", _pin);
+            _logger?.LogDebug("PIN on: {pin}", _pin);
         }
 
         public void SwitchOff()
